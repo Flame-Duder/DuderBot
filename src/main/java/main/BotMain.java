@@ -30,6 +30,7 @@ public class BotMain {
         builder.addEventListeners(new PingCommand());
         builder.addEventListeners(new ModHelp());
         builder.addEventListeners(new UptimeCommand());
+        builder.addEventListeners(new WelcomeMessage());
 
         JDA jda = builder.build();
     }
