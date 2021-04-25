@@ -31,6 +31,7 @@ public class BotMain {
         builder.addEventListeners(new ModHelp());
         builder.addEventListeners(new UptimeCommand());
         builder.addEventListeners(new WelcomeMessage());
+        builder.addEventListeners(new TicketCommand());
 
         JDA jda = builder.build();
     }
