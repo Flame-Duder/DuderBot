@@ -14,12 +14,14 @@ public class HelpCommand extends ListenerAdapter {
         if (args[0].equalsIgnoreCase(Info.prefix + "help")) {
             EmbedBuilder helpEmbed = new EmbedBuilder();
             helpEmbed.setTitle("List Of Commands");
-            helpEmbed.addField("Suggestion: ", "-suggest [suggestion]", false);
-            helpEmbed.addField("User Information: ", "-user [name]", false);
-            helpEmbed.addField("Server Information: ", "-info", false);
-            helpEmbed.addField("Online Members: ", "-online", false);
-            helpEmbed.addField("Ping: ", "-ping", false);
+            helpEmbed.addField("Suggestion: ", Info.prefix + "suggest [suggestion]", false);
+            helpEmbed.addField("User Information: ", Info.prefix + "user [name]", false);
+            helpEmbed.addField("Server Information: ", Info.prefix + "info", false);
+            helpEmbed.addField("Online Members: ", Info.prefix + "online", false);
+            helpEmbed.addField("Ping: ", Info.prefix + "ping", false);
             helpEmbed.addField("Uptime: ", "-uptime", false);
+            helpEmbed.addField("Ticket: ", "-ticket", false);
+            helpEmbed.addField("Calculator: ", Info.prefix +"calculator [number] [operator] [number] or " + Info.prefix + "calc [number] [operator] [number]", false);
             helpEmbed.setColor(Color.CYAN);
             event.getChannel().sendMessage(helpEmbed.build()).queue();
         }
