@@ -24,7 +24,7 @@ public class CalculatorCommand extends ListenerAdapter {
                     EmbedBuilder usage = new EmbedBuilder();
                     usage.setColor(Color.RED);
                     usage.setTitle("\uD83D\uDD34 Invalid Usage");
-                    usage.setDescription("`Please Use: + for addition, - for subtraction, * for multiplication, or / for division`");
+                    usage.setDescription("`Please Use: + for addition, - for subtraction, * for multiplication, or / for division, ^ for exponents`");
                     event.getChannel().sendMessage(usage.build()).queue();
                 } else {
                     double firstNumber = Double.parseDouble(args[1]);
@@ -44,6 +44,10 @@ public class CalculatorCommand extends ListenerAdapter {
                     }
                     if (args[2].equalsIgnoreCase("/")) {
                         double solution = firstNumber / secondNumber;
+                        event.getChannel().sendMessage("Solution: " + solution).queue();
+                    }
+                    if (args[2].equalsIgnoreCase("^")) {
+                        double solution = Math.pow(firstNumber, secondNumber);
                         event.getChannel().sendMessage("Solution: " + solution).queue();
                     }
                 }
