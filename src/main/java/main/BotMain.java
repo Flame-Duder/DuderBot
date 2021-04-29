@@ -14,7 +14,7 @@ public class BotMain {
 
     public static void main(String[] args) throws Exception{
 
-        JDABuilder builder = new JDABuilder().createLight("ODE5NTc1NzMyOTAzNjA4MzIx.YEonYQ.9-fFzBGKjveJHKOHY43F9ula9Qs");
+        JDABuilder builder = new JDABuilder().createLight("");
         builder.setChunkingFilter(ChunkingFilter.ALL);
         builder.enableIntents(GatewayIntent.GUILD_MEMBERS, GatewayIntent.GUILD_PRESENCES);
         builder.setMemberCachePolicy(MemberCachePolicy.ALL);
