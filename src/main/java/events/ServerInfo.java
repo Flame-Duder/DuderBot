@@ -10,7 +10,7 @@ import java.awt.*;
 import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 
-public class ServerMessage extends ListenerAdapter {
+public class ServerInfo extends ListenerAdapter {
     public void onGuildMessageReceived(GuildMessageReceivedEvent event) {
         String[] args = event.getMessage().getContentRaw().split("\\s+");
         if (args[0].equalsIgnoreCase(Info.prefix + "info")) {

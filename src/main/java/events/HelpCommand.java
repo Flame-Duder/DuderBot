@@ -19,9 +19,10 @@ public class HelpCommand extends ListenerAdapter {
             helpEmbed.addField("Server Information: ", Info.prefix + "info", false);
             helpEmbed.addField("Online Members: ", Info.prefix + "online", false);
             helpEmbed.addField("Ping: ", Info.prefix + "ping", false);
-            helpEmbed.addField("Uptime: ", "-uptime", false);
-            helpEmbed.addField("Ticket: ", "-ticket", false);
+            helpEmbed.addField("Uptime: ", Info.prefix + "uptime", false);
+            helpEmbed.addField("Ticket: ", Info.prefix + "ticket", false);
             helpEmbed.addField("Calculator: ", Info.prefix +"calc(ulator) [number] [operator] [number]", false);
+            helpEmbed.addField("Calculator: ", Info.prefix +"8ball [message]", false);
             helpEmbed.setColor(Color.CYAN);
             event.getChannel().sendMessage(helpEmbed.build()).queue();
         }
