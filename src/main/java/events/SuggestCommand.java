@@ -54,7 +54,7 @@ public class SuggestCommand extends ListenerAdapter {
                 }
                 else {
                     event.getMessage().delete().queue();
-                    String suggestion = Arrays.toString(args).replace("-suggest", "").replace("[", "").replace("]", "").replace(",", "");
+                    String suggestion = event.getMessage().getContentRaw().replaceFirst("-suggest", "");
                     String userName = Objects.requireNonNull(Objects.requireNonNull(event.getMember()).getUser().getName());
                     User user = event.getGuild().getMembersByName(userName, true).get(0).getUser();
                     String avatar = user.getAvatarUrl();

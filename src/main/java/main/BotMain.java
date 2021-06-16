@@ -12,7 +12,7 @@ public class BotMain {
 
     private static JDA jda;
 
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
 
         JDABuilder builder = new JDABuilder().createLight("");
         builder.setChunkingFilter(ChunkingFilter.ALL);
@@ -35,6 +35,8 @@ public class BotMain {
         builder.addEventListeners(new CalculatorCommand());
         builder.addEventListeners(new EightBallFortune());
         builder.addEventListeners(new CoinFlip());
+        builder.addEventListeners(new StockSearch());
+        builder.addEventListeners(new UserEmbedCreator());
 
         JDA jda = builder.build();
     }
