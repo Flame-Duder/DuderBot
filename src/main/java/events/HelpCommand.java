@@ -24,7 +24,6 @@ public class HelpCommand extends ListenerAdapter {
         if (args[0].equalsIgnoreCase(Info.prefix + "help") && args[1].equalsIgnoreCase("fun")) {
             EmbedBuilder helpEmbed = new EmbedBuilder();
             helpEmbed.setTitle("List Of Commands");
-            helpEmbed.addField("Calculator: ", Info.prefix + "calc(ulator) [number] [operator] [number]", false);
             helpEmbed.addField("8ball: ", Info.prefix + "8ball [message]", false);
             helpEmbed.addField("Coinflip: ", Info.prefix + "coinflip or " + Info.prefix + "cf", false);
             helpEmbed.setColor(Color.CYAN);
@@ -46,6 +45,8 @@ public class HelpCommand extends ListenerAdapter {
             helpEmbed.addField("Suggestion: ", Info.prefix + "suggest [suggestion]", false);
             helpEmbed.addField("Ping: ", Info.prefix + "ping", false);
             helpEmbed.addField("Ticket: ", Info.prefix + "ticket", false);
+            helpEmbed.addField("Calculator: ", Info.prefix + "calc(ulator) [number] [operator] [number]", false);
+            helpEmbed.addField("Embed: ", Info.prefix + "embed [message]", false);
             helpEmbed.setColor(Color.CYAN);
             event.getChannel().sendMessage(helpEmbed.build()).queue();
         }

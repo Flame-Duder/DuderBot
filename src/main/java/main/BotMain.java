@@ -14,7 +14,7 @@ public class BotMain {
 
     public static void main(String[] args) throws Exception {
 
-        JDABuilder builder = new JDABuilder().createLight("");
+        JDABuilder builder = new JDABuilder().createLight("ODE5NTc1NzMyOTAzNjA4MzIx.YEonYQ.qJWlDZ79bdwlibYX3qwtYa1CzTE");
         builder.setChunkingFilter(ChunkingFilter.ALL);
         builder.enableIntents(GatewayIntent.GUILD_MEMBERS, GatewayIntent.GUILD_PRESENCES);
         builder.setMemberCachePolicy(MemberCachePolicy.ALL);
@@ -37,6 +37,7 @@ public class BotMain {
         builder.addEventListeners(new CoinFlip());
         builder.addEventListeners(new StockSearch());
         builder.addEventListeners(new UserEmbedCreator());
+        builder.addEventListeners(new BanCommand());
 
         JDA jda = builder.build();
     }
